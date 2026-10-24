@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="طريق النور للدعاية والإعلان — تركيب وتصنيع وتنفيذ اللوحات والواجهات وشاشات LED وكاميرات المراقبة في مكة وجدة والطائف.">
+<title>طريق النور | الدعاية والإعلان</title>
+<style>
+:root{--navy:#0b1b32;--blue:#155eef;--gold:#f6c945;--ink:#172033;--muted:#667085;--line:#e7ebf2;--bg:#f5f7fb;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Tahoma,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.8}
+a{text-decoration:none;color:inherit}
+.wrap{width:min(1120px,92%);margin:auto}
+header{background:var(--navy);color:#fff;position:sticky;top:0;z-index:10;border-bottom:1px solid #26354b}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:14px 0}
+.brand{display:flex;align-items:center;gap:12px;font-weight:800;font-size:1.08rem}
+.logo{display:grid;place-items:center;width:43px;height:43px;border-radius:13px;background:var(--gold);color:var(--navy);font-size:1.4rem;font-weight:900}
+nav{display:flex;gap:22px;align-items:center;font-size:.92rem;color:#e4e9f2}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--blue);color:#fff;padding:11px 18px;border-radius:12px;font-weight:700;border:0;cursor:pointer}
+.btn.gold{background:var(--gold);color:var(--navy)}
+.hero{background:linear-gradient(90deg,rgba(7,19,38,.92) 0%,rgba(7,19,38,.72) 47%,rgba(7,19,38,.15) 100%),url('assets/hero-signage.jpg') center/cover;color:#fff;padding:94px 0 105px;overflow:hidden;min-height:470px;display:flex;align-items:center}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1fr);gap:20px;align-items:center;max-width:1120px}
+.eyebrow{display:inline-block;color:var(--gold);font-weight:700;font-size:.9rem;margin-bottom:10px}
+h1{font-size:clamp(2rem,4.5vw,3.55rem);line-height:1.25;margin:0 0 18px;letter-spacing:-1px}
+.hero p{max-width:520px;color:#e1e9f4;font-size:1.02rem;margin:0 0 22px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap}
+.hero-note{margin-top:20px;color:#c3d0e2;font-size:.88rem}
+.hero-panel{display:none}
+.hero-panel h3{margin:0 0 14px;color:var(--gold)}
+.hero-stat{display:flex;align-items:center;gap:12px;padding:12px 0;border-bottom:1px solid #ffffff22}
+.hero-stat:last-child{border-bottom:0}
+.stat-icon{width:42px;height:42px;display:grid;place-items:center;background:#ffffff16;border-radius:12px;font-size:1.25rem}
+section{padding:66px 0}
+.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:28px}
+.section-head h2{margin:0;font-size:clamp(1.6rem,3vw,2.25rem);color:var(--navy)}
+.section-head p{margin:5px 0 0;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;box-shadow:0 5px 18px #14213b06;overflow:hidden}
+.service-photo{height:170px;margin:-22px -22px 18px;background-size:cover;background-position:center;position:relative;border-radius:17px 17px 0 0}
+.service-photo:after{content:'';position:absolute;inset:0;background:linear-gradient(0deg,#08182ed9,transparent 70%)}
+.service-photo span{position:absolute;z-index:1;bottom:12px;right:16px;color:#fff;font-weight:800;font-size:1.05rem;text-shadow:0 2px 6px #0008}
+.price-list li{align-items:center;flex-wrap:wrap}.price-list li .service-label{flex:1;min-width:140px}.price-list li .price{margin-right:auto}.service-wa .wa-icon{width:16px;height:16px;flex-basis:16px}
+@media(max-width:600px){.service-photo{height:190px}}
+.card-top{display:flex;align-items:center;gap:12px;margin-bottom:12px}
+.card-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:14px;background:#eef4ff;color:var(--blue);font-size:1.4rem}
+.card h3{margin:0;font-size:1.12rem;color:var(--navy)}
+.card p{color:var(--muted);margin:4px 0 14px;font-size:.92rem}
+.price-list{list-style:none;margin:0;padding:0}
+.price-list li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px dashed var(--line);font-size:.91rem}
+.price-list li:last-child{border-bottom:0}
+.price{font-weight:800;color:var(--blue);white-space:nowrap}
+.service-wa{display:inline-flex;align-items:center;justify-content:center;gap:5px;margin-right:8px;padding:5px 9px;border-radius:8px;background:#16a34a;color:#fff;font-weight:700;font-size:.78rem;white-space:nowrap}
+.service-wa:hover,.float-wa:hover{background:#12843d}
+.wa-icon{width:20px;height:20px;display:inline-block;flex:0 0 20px}
+.float-wa{position:fixed;left:20px;bottom:20px;z-index:20;display:flex;align-items:center;gap:9px;padding:12px 16px;border-radius:999px;background:#16a34a;color:#fff;box-shadow:0 8px 25px #0003;font-weight:800}
+
+.note{background:#fff9e6;border:1px solid #f4e3a4;border-radius:16px;padding:18px 20px;margin-top:22px;color:#5f4b11}
+.note strong{color:#3e3108}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.step{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}
+.step-num{width:38px;height:38px;display:grid;place-items:center;border-radius:12px;background:var(--navy);color:var(--gold);font-weight:900;margin-bottom:12px}
+.step h3{margin:0 0 5px}.step p{margin:0;color:var(--muted);font-size:.93rem}
+.contact{background:var(--navy);color:#fff;padding:52px 0}
+.contact-inner{display:flex;justify-content:space-between;align-items:center;gap:24px}
+.contact h2{font-size:clamp(1.6rem,3vw,2.25rem);margin:0 0 8px}
+.contact p{margin:0;color:#cbd5e1}
+.phone{font-size:clamp(1.4rem,3vw,2rem);font-weight:900;color:var(--gold);direction:ltr;display:inline-block;margin:8px 0}
+footer{background:#071326;color:#b8c4d6;padding:18px 0;font-size:.86rem}
+.footer-inner{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media(max-width:850px){nav{display:none}.hero-grid{grid-template-columns:1fr}.hero-panel{max-width:520px}.grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.hero{padding:54px 0}.grid,.steps{grid-template-columns:1fr}.section-head{display:block}.contact-inner{display:block}.contact .btn{margin-top:18px}.card{padding:19px}section{padding:48px 0}}
+
+.quick-links{background:#f7f9fc;padding:30px 0 38px}
+.quick-links-head{text-align:center;margin-bottom:24px}
+.quick-links-head h2{margin:0;color:var(--navy);font-size:clamp(1.45rem,3vw,2rem)}
+.quick-links-head p{margin:5px 0 0;color:var(--muted);font-size:.92rem}
+.quick-link-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
+.quick-link{display:flex;align-items:center;gap:16px;background:#fff;border:1px solid #e1e8f2;border-radius:20px;padding:20px;box-shadow:0 8px 24px #14213b08;transition:transform .2s,box-shadow .2s;min-height:120px}
+.quick-link:hover{transform:translateY(-3px);box-shadow:0 14px 30px #14213b12}
+.quick-link-icon{width:62px;height:62px;flex:0 0 62px;display:grid;place-items:center;border-radius:18px;font-size:1.9rem}
+.quick-link.drive .quick-link-icon{background:#e8f3ff;color:#1a73e8}
+.quick-link.catalog .quick-link-icon{background:#e7f9ed;color:#128c4a}
+.quick-link-copy{flex:1}
+.quick-link-copy strong{display:block;color:var(--navy);font-size:1.12rem;margin-bottom:3px}
+.quick-link-copy span{display:block;color:var(--muted);font-size:.9rem;line-height:1.6}
+.quick-link-arrow{font-size:1.5rem;color:#8995a7}
+@media(max-width:600px){.quick-link-grid{grid-template-columns:1fr}.quick-link{padding:17px}.quick-link-icon{width:54px;height:54px;flex-basis:54px}}
+
+
+/* مساحة العروض المتغيرة */
+.promo-section{padding:26px 0 18px;background:#f5f7fb}
+.promo-slider{position:relative;overflow:hidden;border-radius:24px;min-height:300px;background:#0b1b32;box-shadow:0 16px 38px #0b1b321c;isolation:isolate}
+.promo-slide{position:absolute;inset:0;display:block;opacity:0;visibility:hidden;transition:opacity .55s ease;background-size:cover;background-position:center;padding:0;color:white;cursor:pointer;outline-offset:-5px}
+.promo-slide:before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(6,18,37,.9) 0%,rgba(6,18,37,.65) 43%,rgba(6,18,37,.12) 78%);z-index:0;pointer-events:none}
+.promo-slide:after{content:'اضغط لطلب العرض عبر واتساب';position:absolute;bottom:18px;right:20px;background:rgba(7,19,38,.72);color:#fff;border:1px solid #ffffff66;border-radius:999px;padding:5px 12px;font-size:.82rem;font-weight:700;z-index:1;pointer-events:none}
+.promo-slide:hover:after{background:#16a34a}
+.promo-slide.active{position:relative;opacity:1;visibility:visible}
+.promo-copy{position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;width:min(510px,58%);min-height:300px;padding:34px 44px}.promo-kicker{display:inline-flex;align-items:center;gap:8px;background:#f6c945;color:#0b1b32;border-radius:999px;padding:4px 12px;font-size:.78rem;font-weight:900}.promo-copy strong{display:block;margin:10px 0 5px;font-size:clamp(1.4rem,3vw,2.25rem);line-height:1.3;color:#fff}.promo-copy small{display:block;color:#e1e9f4;font-size:.95rem;line-height:1.7}.promo-cta{display:inline-flex;margin-top:15px;padding:7px 13px;border:1px solid #ffffff8a;border-radius:10px;color:#fff;font-size:.83rem;font-weight:800;background:#ffffff12}.promo-controls{position:absolute;bottom:18px;left:22px;display:flex;align-items:center;gap:8px;z-index:2}.promo-dot{width:9px;height:9px;border:0;border-radius:50%;background:#ffffff88;padding:0;cursor:pointer}.promo-dot.active{width:25px;border-radius:8px;background:var(--gold)}.promo-arrow{width:36px;height:36px;border:1px solid #ffffff70;background:#07132688;color:#fff;border-radius:50%;cursor:pointer;font-size:1.1rem}.promo-arrow:hover{background:var(--gold);color:var(--navy)}
+@media(max-width:600px){.promo-slider{min-height:255px;border-radius:18px}.promo-slide{background-position:center}.promo-slide:after{display:none}.promo-copy{width:100%;min-height:255px;padding:28px 24px}.promo-copy strong{font-size:1.45rem}.promo-copy small{font-size:.84rem}.promo-controls{bottom:12px;left:12px}}
+
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home"><span class="logo">ن</span><span>طريق النور<br><small style="font-weight:400;color:#cbd5e1">للدعاية والإعلان</small></span></a>
+    <nav aria-label="التنقل الرئيسي">
+      <a href="#services">خدماتنا</a><a href="#portfolio-links">أعمالنا والكتالوج</a><a href="#contact">تواصل معنا</a>
+    </nav>
+    <a class="btn gold" href="https://wa.me/966568397048" target="_blank" rel="noopener">اطلب عرض سعر</a>
+  </div>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">طريق النور للدعاية والإعلان</span>
+      <h1>نهتم بتفاصيلك<br><span style="color:var(--gold)">لتظهر بأفضل صورة</span></h1>
+      <p>حلول متكاملة للدعاية والإعلان والتجهيزات التجارية.</p>
+      <div class="hero-actions">
+        <a class="btn gold" href="#services">↓ تصفّح خدماتنا</a>
+        <a class="btn" href="https://wa.me/966568397048" target="_blank" rel="noopener">واتساب 0568397048</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="promo-section" id="offers" aria-label="العروض المميزة">
+ <div class="wrap">
+  <div class="promo-slider" id="promoSlider">
+   <a class="promo-slide active" href="https://wa.me/966568397048" target="_blank" rel="noopener noreferrer" style="background-image:url('assets/signage-installation.jpg')" aria-label="عرض الحروف واللوحات الإعلانية" aria-hidden="false"><span class="promo-copy"><span class="promo-kicker">خدمة متكاملة</span><strong>حروف بارزة ولوحات مضيئة</strong><small>تصنيع وتركيب وتشغيل باحترافية لمشروعك التجاري.</small><span class="promo-cta">اطلب عرض السعر عبر واتساب</span></span></a>
+   <a class="promo-slide" href="https://wa.me/966568397048" target="_blank" rel="noopener noreferrer" style="background-image:url('assets/led-screen-installation.jpg')" aria-label="عرض شاشات LED" aria-hidden="true"><span class="promo-copy"><span class="promo-kicker">حلول عرض حديثة</span><strong>شاشات LED داخلية وخارجية</strong><small>تركيب وتشغيل احترافي للشاشات في الفعاليات والمواقع التجارية.</small><span class="promo-cta">اطلب عرض السعر عبر واتساب</span></span></a>
+   <a class="promo-slide" href="https://wa.me/966568397048" target="_blank" rel="noopener noreferrer" style="background-image:url('assets/hero-signage.jpg')" aria-label="عرض الواجهات والتشطيبات" aria-hidden="true"><span class="promo-copy"><span class="promo-kicker">واجهة تليق بمكانك</span><strong>واجهات وتشطيبات عصرية</strong><small>كلادينج واستيكرات وبدائل ديكور بتفاصيل دقيقة.</small><span class="promo-cta">اطلب عرض السعر عبر واتساب</span></span></a>
+   <a class="promo-slide" href="https://wa.me/966568397048" target="_blank" rel="noopener noreferrer" style="background-image:url('assets/cctv-installation.jpg')" aria-label="عرض كاميرات المراقبة" aria-hidden="true"><span class="promo-copy"><span class="promo-kicker">حماية لمكانك</span><strong>أنظمة كاميرات مراقبة</strong><small>تمديد وتركيب وتشغيل منظم للمحلات والمكاتب والمشاريع.</small><span class="promo-cta">اطلب عرض السعر عبر واتساب</span></span></a>
+   <a class="promo-slide" href="https://wa.me/966568397048" target="_blank" rel="noopener noreferrer" style="background-image:url('assets/fitout-interior.jpg')" aria-label="عرض الديكور والتجهيزات" aria-hidden="true"><span class="promo-copy"><span class="promo-kicker">تجهيزات تجارية</span><strong>ديكور وتجهيزات داخلية</strong><small>حلول عملية تمنح المساحة مظهرًا راقيًا وجاهزًا للاستخدام.</small><span class="promo-cta">اطلب عرض السعر عبر واتساب</span></span></a>
+   <div class="promo-controls" aria-label="التنقل بين البنرات">
+    <button class="promo-arrow" type="button" id="promoPrev" aria-label="البنر السابق">›</button>
+    <div id="promoDots" style="display:flex;gap:7px;align-items:center"></div>
+    <button class="promo-arrow" type="button" id="promoNext" aria-label="البنر التالي">‹</button>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="quick-links" id="portfolio-links">
+  <div class="wrap">
+    <div class="quick-link-grid">
+      <a class="quick-link drive" href="https://drive.google.com/drive/folders/1ViU70ym5-xLVwC7bUPi8Cc2-vIXgmEf6" target="_blank" rel="noopener noreferrer" aria-label="شاهد أعمال طريق النور">
+        <span class="quick-link-icon" aria-hidden="true">📁</span>
+        <span class="quick-link-copy"><strong>معرض أعمالنا</strong><span>شاهد شغلنا ومشاريعنا.</span></span>
+        <span class="quick-link-arrow" aria-hidden="true">←</span>
+      </a>
+      <a class="quick-link catalog" href="https://wa.me/c/966568397048" target="_blank" rel="noopener noreferrer" aria-label="افتح كتالوج واتساب">
+        <span class="quick-link-icon" aria-hidden="true">🛍️</span>
+        <span class="quick-link-copy"><strong>كتالوج واتساب</strong><span>تصفّح المنتجات واطلب اللي يناسبك.</span></span>
+        <span class="quick-link-arrow" aria-hidden="true">←</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head"><div><h2>أهم خدماتنا</h2><p>اختر الخدمة المناسبة لمشروعك.</p></div></div>
+    <div class="grid">
+      <article class="card">
+        <div class="service-photo" role="img" aria-label="حروف بارزة ولوحات مضيئة" style="background-image:url(&quot;assets/signage-installation.jpg&quot;)"><span>حروف بارزة ولوحات مضيئة</span></div>
+        <div class="card-top"><span class="card-icon">▣</span><h3>الحروف واللوحات الإعلانية</h3></div>
+        <ul class="price-list">
+          <li><span>تركيب الحروف البارزة</span><span class="price">70 ريال/م طولي</span></li>
+          <li><span>تركيب ليدات الحروف</span><span class="price">12 ريال/م طولي</span></li>
+        </ul><p>الارتفاع الأقصى للحروف: 55 سم.</p>
+      </article>
+      <article class="card">
+        <div class="service-photo" role="img" aria-label="واجهات وتشطيبات حديثة" style="background-image:url(&quot;assets/hero-signage.jpg&quot;)"><span>واجهات وتشطيبات حديثة</span></div>
+        <div class="card-top"><span class="card-icon">▤</span><h3>الواجهات والتشطيبات</h3></div>
+        <ul class="price-list">
+          <li><span>تركيب الاستيكرات</span><span class="price">12 ريال/م²</span></li>
+          <li><span>تركيب الكلادينج</span><span class="price">65 ريال/م²</span></li>
+          <li><span>الإسمنت بورد: تركيب وتشطيب</span><span class="price">60 ريال/م²</span></li>
+          <li><span>ألواح الديكور والبديل: توريد وتركيب</span><span class="price">225 ريال/م طولي</span></li>
+          <li><span>الوحدات الديكورية: توريد وتركيب</span><span class="price">800 ريال/وحدة</span></li>
+        </ul><p>الارتفاع الأقصى لألواح الديكور والبديل: 290 سم.</p>
+      </article>
+      <article class="card">
+        <div class="service-photo" role="img" aria-label="تجهيزات المواقع الإنشائية" style="background-image:url(&quot;assets/construction-fence.jpg&quot;)"><span>تجهيزات المواقع الإنشائية</span></div>
+        <div class="card-top"><span class="card-icon">▥</span><h3>أسوار المواقع الإنشائية</h3></div>
+        <p>تصنيع وتنفيذ الأسوار شامل الخرسانة والحديد والتغطية والبانر للواجهة الخارجية.</p>
+        <ul class="price-list"><li><span>السعر</span><span class="price">140 ريال/م²</span></li></ul>
+      </article>
+      <article class="card">
+        <div class="service-photo" role="img" aria-label="شاشات وعروض مرئية" style="background-image:url(&quot;assets/led-screen-installation.jpg&quot;)"><span>شاشات وعروض مرئية</span></div>
+        <div class="card-top"><span class="card-icon">▦</span><h3>شاشات LED</h3></div>
+        <ul class="price-list">
+          <li><span>تركيب وتشغيل الشاشات الداخلية</span><span class="price">300 ريال/م²</span></li>
+          <li><span>تركيب وتشغيل الشاشات الخارجية</span><span class="price">500 ريال/م²</span></li>
+          <li><span>عمولة وساطة الشاشات الإيجارية</span><span class="price">25 ريال/م²</span></li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="service-photo" role="img" aria-label="أنظمة كاميرات المراقبة" style="background-image:url(&quot;assets/cctv-installation.jpg&quot;)"><span>أنظمة كاميرات المراقبة</span></div>
+        <div class="card-top"><span class="card-icon">◉</span><h3>كاميرات المراقبة</h3></div>
+        <p>تركيب وتمديدات وتشغيل الكاميرات.</p>
+        <ul class="price-list"><li><span>لكل كاميرا</span><span class="price">75 ريال</span></li></ul>
+      </article>
+      <article class="card" style="background:#0b1b32;color:#fff;border-color:#0b1b32">
+        <div class="card-top"><span class="card-icon" style="background:#263954;color:#f6c945">＋</span><h3 style="color:#fff">هل لديك مشروع خاص؟</h3></div>
+        <p style="color:#cbd5e1">أرسل نوع الخدمة والموقع والمقاسات والكميات، وأرفق صور الموقع إن توفرت للحصول على عرض سعر مناسب.</p>
+        <a class="btn gold" href="https://wa.me/966568397048?text=%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1" target="_blank" rel="noopener">اطلب عرض سعر</a>
+      </article>
+    </div>
+    <div class="note"><strong>شروط التسعير:</strong> الحد الأدنى لأي خدمة 200 ريال، والحد الأدنى لتركيب وتشغيل الشاشات 1,000 ريال. الأسعار مرنة حسب الكميات والمساحات، مع إمكانية التفاوض للمشاريع الكبيرة.</div>
+  </div>
+</section>
+
+<section id="how" style="background:#fff">
+  <div class="wrap">
+    <div class="section-head"><div><h2>طريقة الطلب</h2><p>ثلاث خطوات وبكل بساطة.</p></div></div>
+    <div class="steps">
+      <article class="step"><div class="step-num">1</div><h3>أرسل تفاصيل الخدمة</h3><p>حدد نوع الخدمة المطلوبة والموقع والمدينة.</p></article>
+      <article class="step"><div class="step-num">2</div><h3>أرفق المقاسات والكميات</h3><p>أرسل الأبعاد والكميات وصور الموقع إن توفرت.</p></article>
+      <article class="step"><div class="step-num">3</div><h3>استلم عرض السعر</h3><p>يتم مراجعة التفاصيل والتواصل لتأكيد نطاق العمل والتكلفة.</p></article>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact" id="contact">
+  <div class="wrap contact-inner">
+    <div><span class="eyebrow">نرحب بالتعاون</span><h2>للتواصل والحجز وطلب عروض الأسعار</h2><p>التعاون متاح مع مكاتب الدعاية والإعلان والمقاولين وشركات التجهيزات في مكة وجدة والطائف.</p><a class="phone" href="tel:+966568397048">0568397048</a></div>
+    <a class="btn gold" href="https://wa.me/966568397048" target="_blank" rel="noopener">ابدأ محادثة واتساب ↗</a>
+  </div>
+</section>
+</main>
+<footer><div class="wrap footer-inner"><span>© <span id="year">2026</span> طريق النور للدعاية والإعلان</span><span>تنفيذ وتركيب • مكة المكرمة • جدة • الطائف</span></div></footer>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+<a class="float-wa" href="https://wa.me/966568397048?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D8%BA%D8%A8%20%D9%81%D9%8A%20%D8%B7%D9%84%D8%A8%20%D8%B9%D8%B1%D8%B6%20%D8%B3%D8%B9%D8%B1" target="_blank" rel="noopener"><svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 .8A15.1 15.1 0 0 0 3.1 23.8L1 31l7.4-1.9A15.2 15.2 0 1 0 16 .8zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2 1.2-4.3-.3-.5A12.3 12.3 0 1 1 16 28.3zm6.8-9.2c-.4-.2-2.1-1-2.4-1.1-.3-.1-.6-.2-.8.2-.2.4-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.8-1.8-1-.9-1.7-2-1.9-2.4-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.3 1.5.5 2 .6.8.2 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.1-.3-.2-.7-.4z"/></svg><span>واتساب</span></a>
+
+<script>
+(function(){
+  const phone = "966568397048";
+  const icon = '<svg class="wa-icon" viewBox="0 0 32 32" aria-hidden="true" fill="currentColor"><path d="M16 .8A15.1 15.1 0 0 0 3.1 23.8L1 31l7.4-1.9A15.2 15.2 0 1 0 16 .8zm0 27.5a12.3 12.3 0 0 1-6.3-1.7l-.5-.3-4.4 1.2 1.2-4.3-.3-.5A12.3 12.3 0 1 1 16 28.3zm6.8-9.2c-.4-.2-2.1-1-2.4-1.1-.3-.1-.6-.2-.8.2-.2.4-.9 1.1-1.1 1.3-.2.2-.4.3-.8.1-.4-.2-1.5-.6-2.8-1.8-1-.9-1.7-2-1.9-2.4-.2-.4 0-.6.2-.8l.6-.7c.2-.2.2-.4.4-.6.1-.2.1-.4 0-.6-.1-.2-.8-1.9-1.1-2.6-.3-.7-.6-.6-.8-.6h-.7c-.2 0-.6.1-.9.4-.3.4-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.5c.2.2 2.4 3.7 5.8 5.1.8.3 1.5.5 2 .6.8.2 1.6.2 2.2.1.7-.1 2.1-.9 2.4-1.7.3-.8.3-1.5.2-1.7-.1-.1-.3-.2-.7-.4z"/></svg>';
+  document.querySelectorAll('#services .card').forEach(card => {
+    const category = card.querySelector('h3')?.textContent.trim() || 'خدمة';
+    card.querySelectorAll('.price-list li').forEach(li => {
+      const spans = li.querySelectorAll(':scope > span');
+      if (!spans.length) return;
+      const service = spans[0].textContent.trim();
+      const price = spans[1]?.textContent.trim() || '';
+      const message = [
+        '🏢 *طريق النور للدعاية والإعلان*',
+        '📋 *طلب عرض سعر*',
+        '━━━━━━━━━━━━━━',
+        '🔹 *الخدمة المطلوبة:* ' + service,
+        '📂 *القسم:* ' + category,
+        price ? '💰 *السعر المعلن:* ' + price : '',
+        '━━━━━━━━━━━━━━',
+        '📍 *المدينة / موقع التنفيذ:* ',
+        '📐 *المقاسات:* ',
+        '🔢 *الكمية المطلوبة:* ',
+        '👤 *اسم العميل:* ',
+        '',
+        'يرجى مراجعة التفاصيل وتأكيد السعر النهائي حسب المقاسات والكميات وموقع التنفيذ.',
+        'شكرًا لتواصلكم معنا.'
+      ].filter(Boolean).join('\n');
+      const link = document.createElement('a');
+      link.className = 'service-wa';
+      link.href = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.innerHTML = icon + '<span>واتساب</span>';
+      link.setAttribute('aria-label', 'اطلب ' + service + ' عبر واتساب');
+      li.appendChild(link);
+    });
+  });
+})();
+</script>
+
+
+<script>
+(function(){
+ const slider=document.getElementById('promoSlider'); if(!slider)return;
+ const slides=[...slider.querySelectorAll('.promo-slide')], dotsBox=document.getElementById('promoDots'); let current=0,timer;
+ slides.forEach((slide,i)=>{const dot=document.createElement('button');dot.type='button';dot.className='promo-dot'+(i===0?' active':'');dot.setAttribute('aria-label','عرض البنر '+(i+1));dot.addEventListener('click',()=>show(i,true));dotsBox.appendChild(dot)});
+ const dots=[...dotsBox.querySelectorAll('button')];
+ function show(i,reset){current=(i+slides.length)%slides.length;slides.forEach((el,n)=>{el.classList.toggle('active',n===current);el.setAttribute('aria-hidden',n===current?'false':'true')});dots.forEach((el,n)=>el.classList.toggle('active',n===current));if(reset)restart()}
+ function restart(){clearInterval(timer);timer=setInterval(()=>show(current+1,false),5500)}
+ document.getElementById('promoPrev').addEventListener('click',()=>show(current-1,true));document.getElementById('promoNext').addEventListener('click',()=>show(current+1,true));
+ slider.addEventListener('mouseenter',()=>clearInterval(timer));slider.addEventListener('mouseleave',restart);slider.addEventListener('focusin',()=>clearInterval(timer));slider.addEventListener('focusout',restart);restart();
+})();
+</script>
+
+</body>
+</html>
